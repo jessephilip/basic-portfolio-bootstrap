@@ -1,68 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Contact</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/hover.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contact</title>
+		<!-- CDN for hover.css -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
 		
-<!-- header is the top section with my name and the three links for navigating -->
-	<header>
-		<h1 id="name">Jesse Matherne</h1>
-
-	<!-- class links is a separate section for navigating links -->
-		<nav class="links">
-			<a class="hvr-underline-from-center" href="about.html">About</a>
-			<a class="hvr-underline-from-center" href="portfolio.html">Portfolio</a>
-			<a class="hvr-underline-from-center" href="contact.html">Contact</a>
-		</nav>
-
-		<div class="clearfix"></div>
-
-	</header>
-
-	<!-- class container will pertain to everything but the header and footer -->
-
-	<section class="container">
-
-		<section id="main_content">
-			<section id="contact">
+		<!-- Slate Themed Bootstrap -->
+		<link rel="stylesheet" href="assets/css/cosmostrap.css">
+		
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	
+	<body>
+		<!-- Sets up a Navbar with navigation links on the right side of the bar -->
+		<!-- This nav is for medium to large screens -->
+		<div id="show_large" class="container nav_container">
+			<nav class="row navbar navbar-default">
+				<div class="col-md-1"></div>
+				<div class="col-md-6">
+					<a class="navbar-brand name" href="about.html">Jesse Matherne</a>
+				</div>
+				<div id="links" class="col-md-3">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="about.html">About</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2"></div>
+			</nav>
+		</div>
+		<!-- This nav is for small screens -->
+		<div id="show_small" class="container nav_container">
+			<nav class="row navbar navbar-default">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-10">
+					<a class="navbar-brand name" href="about.html">Jesse Matherne</a>
+				</div>
+				<div class="col-xs-1"></div>
+			</nav>
+			<nav class="row navbar navbar-default">
+				<div class="col-xs-12 small_links">
+					<ul class="nav navbar-nav">
+						<li><a href="about.html">About</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	<section class="line"></section>
+	
+	<section class="container main_container">
+		<section id="main_content" class="row">
+			<div class="col-md-1"></div>
+			<section id="contact" class="col-md-6">
 				<h2>Contact</h2>
 				<hr>
 				<form>
 					Name
 					<input type="text" name="userName"> <br>
-					Email 
+					Email
 					<input type="text" name="email"> <br>
 					Message
 					<textarea></textarea> <br>
 					<input class="hvr-grow" type="submit" name="submit">
-
 				</form>
 			</section>
-
-			<aside>
+			<div class="col-md-1"></div>
+			<aside class="col-md-3 text-center">
 				<h2>Connect with Me</h2>
 				<hr>
 				<a class="hvr-grow" href="https://github.com/jessephilip" target="_blank"><img src="assets/images/github.svg" alt="github image"></a>
 				<a class="hvr-grow" href="https://www.linkedin.com/in/jesse-matherne-07333255/" target="_blank"><img src="assets/images/linkedin.svg" alt="linkedin image"></a>
 				<a class="hvr-grow" href="http://codepen.io/jessephilip/" target="_blank"><img src="assets/images/codepen.svg" alt="codepen image"></a>
-
+				<p></p>
 			</aside>
-			<div class="clearfix"></div>
+			<div class="col-md-1"></div>
 		</section>
-
 	</section>
-
-	<section class="line"></section>
-
-	<footer class="site-footer">
+	<!-- set up a navbar at the bottom for sticky footer -->
+	<footer class="navbar navbar-default container nav_container">
+		<div class="row text-center">
+		<section class="line"></section>
 		<p>&copy; Copyright 2016 by Jesse Matherne</p>
-
-	</footer>
-
+	</div>
+</footer>
 </body>
 </html>

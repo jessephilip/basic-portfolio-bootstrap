@@ -1,95 +1,117 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/hover.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<!-- CDN for hover.css -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
 		
-<!-- header is the top section with my name and the three links for navigating -->
-	<header>
-		<h1 id="name">Jesse Matherne</h1>
-
-		<!-- class links is a separate section for navigating links -->
-		<nav class="links">
-			<a class="hvr-underline-from-center" href="about.html">About</a>
-			<a class="hvr-underline-from-center" href="portfolio.html">Portfolio</a>
-			<a class="hvr-underline-from-center" href="contact.html">Contact</a>
-		</nav>
-
-		<div class="clearfix"></div>
-
-	</header>
-
-	<!-- class container will pertain to everything but the header and footer -->
-
-	<section class="container">
-
-		<section id="main_content">
-			<section id="portfolio">
+		<!-- Slate Themed Bootstrap -->
+		<link rel="stylesheet" href="assets/css/cosmostrap.css">
+		
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	
+	<body>
+		<!-- Sets up a Navbar with navigation links on the right side of the bar -->
+		<!-- This nav is for medium to large screens -->
+		<div id="show_large" class="container nav_container">
+			<nav class="row navbar navbar-default">
+				<div class="col-md-1"></div>
+				<div class="col-md-6">
+					<a class="navbar-brand name" href="about.html">Jesse Matherne</a>
+				</div>
+				<div id="links" class="col-md-3">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="about.html">About</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2"></div>
+			</nav>
+		</div>
+		<!-- This nav is for small screens -->
+		<div id="show_small" class="container nav_container">
+			<nav class="row navbar navbar-default">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-10">
+					<a class="navbar-brand name" href="about.html">Jesse Matherne</a>
+				</div>
+				<div class="col-xs-1"></div>
+			</nav>
+			<nav class="row navbar navbar-default">
+				<div class="col-xs-12 small_links">
+					<ul class="nav navbar-nav">
+						<li><a href="about.html">About</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	<section class="line"></section>
+	<section class="container main_container">
+		<section id="main_content" class="row">
+			<div class="col-md-1"></div>
+			<section id="portfolio" class="col-md-6">
 				<h2>Portfolio</h2>
 				<hr>
-				
-				<section class="oddProjects" id="project1">
-					<h6 class="projectTitle">Project 1</h6>
-					<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 1">
+				<article class="row">
+					<section class="col-md-6">
+						<h6 class="projectTitle">Project 1</h6>
+						<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 1">
+						
+					</section>
+					<section class="col-md-6">
+						<h6 class="projectTitle">Project 2</h6>
+						<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 2">
+						
+					</section>
+				</article>
+				<article class="row">
 					
-				</section>
-
-				<section class="evenProjects" id="project2">
-					<h6 class="projectTitle">Project 2</h6>
-					<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 2">
+					<section class="col-md-6">
+						<h6 class="projectTitle">Project 3</h6>
+						<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 3">
+						
+					</section>
+					<section class="col-md-6">
+						<h6 class="projectTitle">Project 4</h6>
+						<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 4">
+						
+					</section>
+				</article>
+				<article class="row">
 					
-				</section>
-
-				<div class="clearfix"> </div>
-				 
-				<section class="oddProjects" id="project3">
-					<h6 class="projectTitle">Project 3</h6>
-					<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 3">
-					
-				</section>
-
-				<section class="evenProjects" id="project4">
-					<h6 class="projectTitle">Project 4</h6>
-					<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 4">
-					
-				</section>
-
-				<div class="clearfix"> </div>
-				
-				<section class="oddProjects" id="project5">
-					<h6 class="projectTitle">Project 5</h6>
-					<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 5">
-					
-				</section>
-
-				<div class="clearfix"> </div>
-
-			</section>
-
-			<aside>
-				<h2>Connect with Me</h2>
-				<hr>
-				<a class="hvr-grow" href="https://github.com/jessephilip" target="_blank"><img src="assets/images/github.svg" alt="github image"></a>
-				<a class="hvr-grow" href="https://www.linkedin.com/in/jesse-matherne-07333255/" target="_blank"><img src="assets/images/linkedin.svg" alt="linkedin image"></a>
-				<a class="hvr-grow" href="http://codepen.io/jessephilip/" target="_blank"><img src="assets/images/codepen.svg" alt="codepen image"></a>
-
-			</aside>
-			<div class="clearfix"></div>
+					<section class="col-md-6">
+						<h6 class="projectTitle">Project 5</h6>
+						<img src="assets/images/lil_bub-250x250.jpg" alt="portfolio image 5">
+						
+					</section>
+				<section class="col-md-6"></section>
+			</article>
 		</section>
-
+		<div class="col-md-1"></div>
+		<aside class="col-md-3 text-center">
+			<h2>Connect with Me</h2>
+			<hr>
+			<a class="hvr-grow" href="https://github.com/jessephilip" target="_blank"><img src="assets/images/github.svg" alt="github image"></a>
+			<a class="hvr-grow" href="https://www.linkedin.com/in/jesse-matherne-07333255/" target="_blank"><img src="assets/images/linkedin.svg" alt="linkedin image"></a>
+			<a class="hvr-grow" href="http://codepen.io/jessephilip/" target="_blank"><img src="assets/images/codepen.svg" alt="codepen image"></a>
+			<p></p>
+		</aside>
+		<div class="col-md-1"></div>
 	</section>
-
+</section>
+<!-- set up a navbar at the bottom for sticky footer -->
+<footer class="navbar navbar-default container nav_container">
+	<div class="row text-center">
 	<section class="line"></section>
-
-	<footer class="site-footer">
-		<p>&copy; Copyright 2016 by Jesse Matherne</p>
-	</footer>
-
-
+	<p>&copy; Copyright 2016 by Jesse Matherne</p>
+</div>
+</footer>
 </body>
 </html>
